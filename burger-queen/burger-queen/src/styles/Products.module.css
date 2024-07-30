@@ -1,0 +1,290 @@
+.container {
+    display: grid;
+    grid-template-rows: max-content 100px auto auto;
+    grid-template-columns: 3fr 2fr;
+    height: 100vh;
+    grid-template-areas:
+        "title title"
+        "menus name"
+        "products order"
+        "products order";
+    gap: 20px;
+    padding: 20px;
+    margin: 0;
+}
+
+.container>div:first-child {
+    grid-area: 1/1/2/3;
+
+}
+
+.titleContainer {
+    grid-area: title;
+    text-align: center;
+}
+
+.title {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+.crownIcon {
+    vertical-align: middle;
+    margin-left: 10px;
+    color: gold;
+    transform: rotate(15deg);
+}
+
+.containerMenus {
+    grid-area: menus;
+    display: flex;
+    justify-content: start;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.containerMenus button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 166.08px;
+    height: 55.25px;
+}
+
+.containerMenus button.breakfast {
+    background-color: #FFC300;
+    color: #000000;
+}
+
+.containerMenus button.breakfast.selected,
+.containerMenus button.breakfast:hover {
+    background-color: #e0a800;
+    color: #FFFFFF;
+}
+
+.containerMenus button.breakfast.unselected {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.containerMenus button.lunchdinner {
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 267.08px;
+}
+
+.containerMenus button.lunchdinner.selected,
+.containerMenus button.lunchdinner:hover {
+    background-color: #e0a800;
+    color: #FFFFFF;
+}
+
+.containerMenus button.lunchdinner.unselected {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+
+/* .containerMenus button.lunchdinner {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 267.08px;
+    height: 55.25px;
+}
+
+.containerMenus button.lunch-dinner:hover {
+    background-color: #e0e0e0;
+} */
+
+.containerNameClient {
+    grid-area: name;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.containerNameClient p {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerNameClient input {
+    width: 100%;
+    max-width: 406px;
+    height: 39px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.inputError {
+    border-color: red;
+}
+
+.containerProducts {
+    grid-area: products;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: start;
+    max-height: max-content;
+    overflow: scroll;
+}
+
+.logo {
+    width: 209px;
+    height: 127px;
+}
+
+.orderList {
+    grid-area: order;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    background: #ffffff17;
+    border-radius: 10px;
+    gap: 20px;
+    padding: 10px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.list p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFC300;
+}
+
+.list button {
+    background-color: #f9f9f9;
+    place-self: end;
+    background-color: #C6C6C5;
+    color: #FFFFFF;
+    border: none;
+    width: 299px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 19px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.list button:hover {
+    background-color: #b0b0b0;
+}
+
+.containerButton {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.total {
+    color: white;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    place-self: end end;
+}
+
+.buttonCocina {
+    font-size: 19px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #C6C6C5;
+    color: white;
+}
+
+.productImage {
+    height: 100px;
+    width: 209px;
+    background: #ede6dd;
+    object-fit: contain;
+    padding: 5px 0;
+    border-radius: 6px;
+}
+
+.containerTitlePrice {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 8px;
+}
+
+.containerTitlePrice>p {
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+.containerTitlePrice>p:not(.productPrice) {
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline;
+    text-overflow: ellipsis;
+    max-width: 162px;
+}
+
+.productPrice {
+    color: #FFC300;
+}
+
+.trashIcon {
+    color: #FFC300;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.modal {
+    position: static;
+    inset: 40px;
+    border: 1px solid #4a4a4a;
+    background: #34c262;
+    overflow: auto;
+    border-radius: 7px;
+    outline: none;
+    padding: 10px;
+}
